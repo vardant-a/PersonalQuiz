@@ -16,7 +16,6 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        print("Ответ - \(answersChosen!)")
 
         showResult()
     }
@@ -44,7 +43,7 @@ extension ResultViewController {
                 animals[answerChosen.animal]! += 1
             }
         }
-        print("1 - \(animals)")
+        
         let sortiredAnimals = animals.sorted(by: { $0.value > $1.value })
         return sortiredAnimals.first?.key
     }
